@@ -4,16 +4,19 @@
   "description": "对于一些算法的实现记录",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JScheng/algorithms.git"
   },
-  "author": "",
+  "author": "JScheng",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JScheng/algorithms/issues"
   },
-  "homepage": "https://github.com/JScheng/algorithms#readme"
+  "homepage": "https://github.com/JScheng/algorithms#readme",
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
 }
