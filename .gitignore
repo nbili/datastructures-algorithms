@@ -1,2 +1,7 @@
-dea
-node_modules
+.idea/
+.svn/
+data/
+public/
+node_modules/
+logs/
+tmp/
