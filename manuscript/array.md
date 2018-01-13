@@ -176,3 +176,63 @@
 ```javascript
     numbers.copyWithin(index, startCopyIndex, endCopyIndex);
 ```
+
+#### indexOf
+
+> 匹配第一个元素
+
+```javascript
+    numbers.indexOf(3);
+```
+
+#### lastIndexOf
+
+> 匹配最后一个元素
+
+```javascript
+    numbers.lastIndexOf(3);
+```
+
+#### find
+
+> 满足条件的值
+
+```javascript
+    numbers.find(function(element){
+        element % 2 === 0 ? true: false;
+    });
+```
+
+#### findIndex
+
+> 满足条件的索引
+
+```javascript
+    numbers.findIndex(function(element){
+        element % 2 === 0 ? true: false;
+    });
+```
+
+#### includes
+
+> 是否存在某个元素
+
+```javascript
+    numbers.includes(2);
+```
+
+#### toString()
+
+> 输出为字符串
+
+```javascript
+    numbers.toString();
+```
+
+#### join
+
+> 分隔符拼接
+
+```javascript
+    numbers.join('-')
+```
