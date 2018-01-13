@@ -30,7 +30,7 @@
 
 ```javascript
     numbers.shift(11);
-``
+```
 
 #### delete
 
