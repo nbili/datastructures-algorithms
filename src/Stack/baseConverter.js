@@ -1,5 +1,6 @@
 const Stack = require('./Stack-v4')
 
+// 进制转换算法
 function baseConverter(num, base) {
     let remStack = new Stack(),
         rem = null,
