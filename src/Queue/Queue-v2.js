@@ -39,6 +39,11 @@ let Queue = (function () {
         toString() {
             return items.get(this).toString()
         }
+
+        // for test
+        getQueue() {
+            return items.get(this)
+        }
     }
 
     return Queue
