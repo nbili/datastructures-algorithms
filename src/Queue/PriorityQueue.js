@@ -38,8 +38,12 @@ function PriorityQueue() {
 
     this.print = function () {
         for (let i = 0; i < items.length; i++) {
-            console.log(`${items[i].element} - ${items[i].priority}`);
-
+            console.log(`${items[i].element} - ${items[i].priority}`)
         }
+    }
+
+    // for test
+    this.getPriorityQueue = function () {
+        return items
     }
 }
