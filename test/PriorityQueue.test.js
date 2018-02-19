@@ -7,4 +7,5 @@ describe('priorityQueue', function () {
     it('queue isEmpty should return true', function () {
         assert.equal(true, priorityQueue.isEmpty())
     })
+    
 })
