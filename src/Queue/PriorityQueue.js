@@ -65,6 +65,13 @@ let PriorityQueue = (function () {
                 console.log(`${q[i].element} - ${q[i].priority}`)
             }
         }
+
+        // for test
+        getQueue() {
+            return items.get(this)
+        }
     }
     return PriorityQueue
 })()
+
+module.exports = PriorityQueue
