@@ -11,4 +11,9 @@ list.print()
 
 list.insert(2, 'i')
 
+// list.removeAt(0)
+// list.removeAt(1)
+
+list.remove('d')
+
 list.print()
