@@ -52,7 +52,22 @@ function LinkedList() {
     }
 
     this.removeAt = function (position) {
-        
+        if (position > -1 && position < length) {
+            let current = head, previous, index = 0
+            if (position === 0) {
+                head = current.next
+            } else {
+                while (index++ < position) {
+                    previous = current
+                    current = current.next
+                }
+                previous.next = current.next
+            }
+            length--
+            return current.element
+        } else {
+            return null
+        }
     }
 
     this.remove = function (element) {
@@ -60,19 +75,27 @@ function LinkedList() {
     }
 
     this.indexOf = function (element) {
-
+        let current = head, index = 0
+        while (current) {
+            if (element === current.element) {
+                return index
+            }
+            index++
+            current = current.next
+        }
+        return -1
     }
 
     this.isEmpty = function () {
-
+        return length === 0
     }
 
     this.size = function () {
-
+        return length
     }
 
     this.getHead = function () {
-
+        return head
     }
 
     this.toString = function () {
