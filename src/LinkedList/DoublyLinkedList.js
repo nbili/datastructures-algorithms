@@ -22,17 +22,108 @@ let DoublyLinkedList = (function () {
         }
 
         append(element) {
+            let node = new Node(element),
+                current,
+                _tail
 
+            if (this.getHead() === null) {
+                // 空链表
+                head.set(this, node)
+                tail.set(this, node)
+            } else {
+                _tail = this.getTail()
+                _tail.next = node
+                node.prev = _tail
+                tail.set(this, node)
+            }
+            let len = this.size()
+            len++
+            length.set(this, len)
         }
 
         insert(position, element) {
             if (position >= 0 && position <= this.size()) {
+                let node = new Node(element),
+                    current = this.getHead(),
+                    previous,
+                    index = 0
 
+                if (position === 0) {
+                    // 第一个节点
+                    if (!this.getHead()) {
+                        head.set(this, node)
+                        tail.set(this, node)
+                    } else {
+                        node.next = current
+                        current.prev = node
+                        head.set(this, node)
+                    }
+                } else if (position === this.size()) {
+                    // 最后一个节点
+                    current = tail
+                    current.next = node
+                    node.prev = current
+                    tail.set(this, node)
+                } else {
+                    while (index++ < position) {
+                        previous = current
+                        current = current.next
+                    }
+                    node.next = current
+                    previous.next = node
+
+                    current.prev = node
+                    node.prev = previous
+                }
+
+                let len = this.size()
+                len++
+                length.set(this, len)
+
+                return true
+            } else {
+                return false
             }
         }
 
         removeAt(position) {
+            if (position > -1 && position < this.size()) {
+                let _head = this.getHead(),
+                    _tail = this.getTail(),
+                    current = _head,
+                    previous,
+                    index = 0
+                if (position === 0) {
+                    _head = current.next
 
+                    if (this.size() === 1) {
+                        _tail = null
+                    } else {
+                        _head.prev = null
+                    }
+
+                } else if (position === this.size() - 1) {
+                    current = _tail
+                    _tail = current.prev
+                    _tail.next = null
+                } else {
+                    while (index++ < position) {
+                        previous = current
+                        current = current.next
+                    }
+                    previous.next = current.next
+                    current.next.prev = previous
+                }
+
+                head.set(this, _head)
+                tail.set(this, _tail)
+
+                let len = this.size()
+                len--
+                length.set(this, len)
+            } else {
+                return null
+            }
         }
 
         remove(position) {
