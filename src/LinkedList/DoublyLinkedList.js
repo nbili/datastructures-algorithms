@@ -127,11 +127,28 @@ let DoublyLinkedList = (function () {
         }
 
         remove(position) {
-
+            let index = this.indexOf(element)
+            return this.removeAt(index)
         }
 
         indexOf(element) {
-
+            let current = this.getHead(),
+                index = -1
+            if (element === current.element) {
+                return 0
+            }
+            index++
+            while (current.next) {
+                if (element === current.element) {
+                    return index
+                }
+                current = current.next
+                index++
+            }
+            if (element === current.element) {
+                return index
+            }
+            return -1
         }
 
         isEmpty() {
@@ -143,11 +160,23 @@ let DoublyLinkedList = (function () {
         }
 
         toString() {
-
+            let current = this.getHead(),
+                s = current ? current.element : ''
+            while (current && current.next) {
+                current = current.next
+                s += ',' + current.element
+            }
+            return s
         }
 
         inverseToString() {
-
+            let current = this.getHead(),
+                s = current ? current.element : ''
+            while (current && current.prev) {
+                current = current.prev
+                s += ',' + current.element
+            }
+            return s
         }
 
         getHead() {
