@@ -190,3 +190,5 @@ let DoublyLinkedList = (function () {
 
     return DoublyLinkedList
 })()
+
+module.exports = DoublyLinkedList
