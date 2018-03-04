@@ -126,7 +126,7 @@ let DoublyLinkedList = (function () {
             }
         }
 
-        remove(position) {
+        remove(element) {
             let index = this.indexOf(element)
             return this.removeAt(index)
         }
