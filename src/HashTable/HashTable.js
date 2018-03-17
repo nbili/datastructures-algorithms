@@ -34,6 +34,13 @@ function HashTable() {
         table[hashCode(key)] = undefined
     }
 
+    this.print = function () {
+        for (var i = 0; i < table.length; ++i) {
+            if (table[i] !== undefined) {
+                console.log(i + ": " + table[i])
+            }
+        }
+    }
 }
 
 module.exports = HashTable
