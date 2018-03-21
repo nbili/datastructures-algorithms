@@ -35,11 +35,18 @@ function HashTable() {
     }
 
     this.print = function () {
+        var strAry = []
         for (var i = 0; i < table.length; ++i) {
             if (table[i] !== undefined) {
-                console.log(i + ": " + table[i])
+                strAry.push(i + ": " + table[i])
             }
         }
+        return strAry
+    }
+
+    // for test
+    this.getTable = function () {
+        return table
     }
 }
 
