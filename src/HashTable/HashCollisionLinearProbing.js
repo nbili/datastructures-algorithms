@@ -59,4 +59,31 @@ function HashCollisionLinearProbing() {
         }
         return undefined
     }
+
+    this.remove = function (key) {
+        var position = hashCode(key)
+        if (table[position] !== undefined) {
+            if (table[position].key === key) {
+                table[position] = undefined
+            } else {
+                var index = ++position
+                while (table[index] === undefined || table[index].key !== key) {
+                    index++
+                }
+                if (table[index].key === key) {
+                    table[index] = undefined
+                }
+            }
+        }
+    }
+
+    this.print = function () {
+        var ary = []
+        for (let i = 0; i < table.length; ++i) {
+            if (table[i] !== undefined) {
+                ary.push(table[i].toString())
+            }
+        }
+        return ary
+    }
 }
