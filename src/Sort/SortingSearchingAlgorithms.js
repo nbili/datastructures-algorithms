@@ -62,3 +62,5 @@ function ArrayList() {
 
     }
 }
+
+module.exports = ArrayList

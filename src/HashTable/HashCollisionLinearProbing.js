@@ -87,3 +87,5 @@ function HashCollisionLinearProbing() {
         return ary
     }
 }
+
+module.exports = HashCollisionLinearProbing
