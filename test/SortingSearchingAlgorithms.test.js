@@ -2,13 +2,13 @@ let SortingSearchingAlgorithms = require('../src/Sort/SortingSearchingAlgorithms
 let assert = require('assert')
 
 function createNonSortedArray(size) {
-    var array = new SortingSearchingAlgorithms();
+    var sorter = new SortingSearchingAlgorithms();
 
     for (var i = size; i > 0; i--) {
-        array.insert(i);
+        sorter.insert(i);
     }
 
-    return array;
+    return sorter
 }
 
 function createRandomNonSortedArray() {
@@ -25,12 +25,18 @@ function createRandomNonSortedArray() {
     return array;
 }
 
-let sorter = new SortingSearchingAlgorithms
-
 describe('SortingSearchingAlgorithms', function () {
     it('bubbleSort', function () {
-        var ary = createNonSortedArray(7)
-        ary.bubbleSort()
-        assert.deepEqual([1, 2, 3, 4, 5, 6, 7], ary.array)
+        var sorter = createNonSortedArray(7)
+        sorter.bubbleSort()
+        assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
+    })
+})
+
+describe('SortingSearchingAlgorithms', function () {
+    it('selectionSort', function () {
+        var sorter = createNonSortedArray(8)
+        sorter.selectionSort()
+        assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
     })
 })
