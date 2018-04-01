@@ -36,7 +36,7 @@ describe('SortingSearchingAlgorithms', function () {
 describe('SortingSearchingAlgorithms', function () {
     it('selectionSort', function () {
         var sorter = createNonSortedArray(7)
-        sorter.selectionSort()
+        sorter.insertionSort()
         assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
     })
 })
