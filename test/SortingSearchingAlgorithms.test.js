@@ -31,12 +31,22 @@ describe('SortingSearchingAlgorithms', function () {
         sorter.bubbleSort()
         assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
     })
-})
 
-describe('SortingSearchingAlgorithms', function () {
     it('selectionSort', function () {
         var sorter = createNonSortedArray(7)
         sorter.insertionSort()
+        assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
+    })
+
+    it('insertionSort', function () {
+        var sorter = createNonSortedArray(7)
+        sorter.insertionSort()
+        assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
+    })
+
+    it('merge', function () {
+        var sorter = createNonSortedArray(7)
+        sorter.mergeSort()
         assert.deepEqual([1, 2, 3, 4, 5, 6, 7], sorter.array())
     })
 })

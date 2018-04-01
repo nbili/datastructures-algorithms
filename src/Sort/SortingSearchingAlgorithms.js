@@ -62,7 +62,7 @@ function ArrayList() {
         array = mergeSortRec(array)
     }
 
-    var mergeSortRec = function () {
+    var mergeSortRec = function (array) {
         var length = array.length
 
         if (length === 1) {
