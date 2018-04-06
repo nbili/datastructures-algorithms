@@ -18,20 +18,36 @@ hashLinearProbing.put('Nathan', 'nathan@email.com');
 
 describe('HashCollisionLinearProbing', function () {
     it('HashCollisionLinearProbing put function', function () {
-        assert.deepEqual([
-            '[Jonathan-jonathan@email.com],[Jamie-jamie@email.com],[Sue-sue@email.com]',
+        assert.deepEqual(['[Jonathan-jonathan@email.com]',
+            '[Jamie-jamie@email.com]',
+            '[Sue-sue@email.com]',
             '[Nathan-nathan@email.com]',
-            '[Donnie-donnie@email.com],[Ana-ana@email.com]',
-            '[Tyrion-tyrion@email.com],[Aaron-aaron@email.com]',
+            '[Donnie-donnie@email.com]',
+            '[Ana-ana@email.com]',
+            '[Tyrion-tyrion@email.com]',
+            '[Aaron-aaron@email.com]',
             '[Gandalf-gandalf@email.com]',
             '[John-johnsnow@email.com]',
-            '[Mindy-mindy@email.com],[Paul-paul@email.com]'],
-            HashLinearProbing.print())
-    })
-    it('HashCollisionLinearProbing remove function', function () {
-        assert.equal(true, HashLinearProbing.remove('Jamie'))
+            '[Mindy-mindy@email.com]',
+            '[Paul-paul@email.com]'],
+            hashLinearProbing.print())
     })
     it('HashCollisionLinearProbing get function', function () {
-        assert.equal(undefined, HashLinearProbing.get('Jamie'))
+        assert.equal('johnsnow@email.com', hashLinearProbing.get('John'))
+    })
+    it('HashCollisionLinearProbing remove function', function () {
+        hashLinearProbing.remove('John')
+        assert.deepEqual(['[Jonathan-jonathan@email.com]',
+            '[Jamie-jamie@email.com]',
+            '[Sue-sue@email.com]',
+            '[Nathan-nathan@email.com]',
+            '[Donnie-donnie@email.com]',
+            '[Ana-ana@email.com]',
+            '[Tyrion-tyrion@email.com]',
+            '[Aaron-aaron@email.com]',
+            '[Gandalf-gandalf@email.com]',
+            '[Mindy-mindy@email.com]',
+            '[Paul-paul@email.com]'],
+            hashLinearProbing.print())
     })
 })
