@@ -4,7 +4,6 @@
   "description": "对于一些算法的实现记录",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -w"
   },
   "repository": {
     "type": "git",
@@ -17,6 +16,5 @@
   },
   "homepage": "https://github.com/JScheng/algorithms#readme",
   "devDependencies": {
-    "mocha": "^4.1.0"
   }
 }
