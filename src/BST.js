@@ -100,19 +100,39 @@ function pos2(head) {
     const stack1 = []
     const stack2 = []
     stack1.push(head)
-    while(stack1.length) {
+    while (stack1.length) {
       const p = stack1.pop()
       stack2.push(p)
-      if (head.left)
-        stack1.push(head.left)
-      if (head.right)
-        stack1.push(head.right)
+      if (p.left)
+        stack1.push(p.left)
+      if (p.right)
+        stack1.push(p.right)
     }
-    while(stack2.length) {
-      console.log(stack2.pop())
+    while (stack2.length) {
+      console.log(stack2.pop().val)
     }
   }
 }
 
 console.log('==========pos2=========')
 pos2(head)
+
+// 层序遍历
+
+function level(head) {
+  if (head != null) {
+    const queue = []
+    queue.push(head)
+    while (queue.length) {
+      const c = queue.shift()
+      console.log(c.val)
+      if (c.left)
+        queue.push(c.left)
+      if (c.right)
+        queue.push(c.right)
+    }
+  }
+}
+
+console.log('==========level=========')
+level(head)
