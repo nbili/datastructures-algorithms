@@ -1,0 +1,20 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "对于一些算法的实现记录",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JScheng/algorithms.git"
+  },
+  "author": "JScheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JScheng/algorithms/issues"
+  },
+  "homepage": "https://github.com/JScheng/algorithms#readme",
+  "devDependencies": {
+  }
+}
