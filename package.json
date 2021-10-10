@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "jest"
+    "t": "jest --passWithNoTests"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
